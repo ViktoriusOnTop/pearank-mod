@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "pearank",
+	"version": "${version}",
+	"name": "pearank",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Viktorius__"
+	],
+	"contact": {
+		"homepage": "lorem.com",
+		"sources": "github.com/idididntmakeoneyetsorry"
+	},
+	"license": "APACHE-2.0",
+	"icon": "assets/pearank/icon.png",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"viktorius.pearank.Pearank"
+		],
+		"fabric-datagen": [
+			"viktorius.pearank.PearankDataGenerator"
+		]
+	},
+	"mixins": [
+		"pearank.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
