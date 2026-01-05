@@ -95,4 +95,22 @@ public class Pearank implements ModInitializer {
 
         return false;
     }
+
+    public String findRankName(String playerName, List<Rank> ranks) {
+        for (Rank rank : ranks) {
+            List<String> members = rank.getRankMembers();
+            if (members.contains(playerName)) {
+                return rank.getRankName();
+            }
+        }
+
+        for (Rank rank : ranks) {
+            List<String> members = rank.getRankMembers();
+            if (members.contains("thisIsTheDefaultRank")) {
+                return rank.getRankName();
+            }
+        }
+
+        return "No Rank Found";
+    }
 }
